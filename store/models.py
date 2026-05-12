@@ -17,3 +17,5 @@ class Produit(models.Model) :
     description = models.TextField(blank=True)
     image = models.ImageField(upload_to="Articles" , blank=True , null=True)
 
+    def __str__(self):
+        return self.nom
