@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block contenu %}
-    <h1>MyStore</h1>
 {% for Produit in Produits %}
     <h2>{{ Produit.nom }}</h2>
-    <img src="{{ Produit.image.url }}" alt="{{ Produit.nom }} " style = "max-width: 250px ; max-height: 250px">
+    <img src="{{ Produit.image.url }}" alt="{{ Produit.nom }} " style = "max-width: 250px ; max-height: 250px ;
+     text-align: center">
 
 {% endfor %}
 
