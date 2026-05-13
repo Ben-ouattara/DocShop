@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% block contenu %}
-{% for Produit in Produits %}
-    <h2>{{ Produit.nom }}</h2>
-    <img src="{{ Produit.image.url }}" alt="{{ Produit.nom }} " style = "max-width: 250px ; max-height: 250px ;
-     text-align: center">
-
+{% for produit in Produits %}
+    <a href="{{ produit.get_absolute_url }}" style="text-decoration: none">
+        <h2>{{ produit.nom }}</h2>
+        <img src="{{ produit.image.url }}" alt="{{ produit.nom }} " style = "max-width: 250px ; max-height: 250px ">
+        <p>Voir les details</p>
+    </a>
 {% endfor %}
 
 {% endblock %}

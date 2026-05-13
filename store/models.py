@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 """
@@ -20,3 +21,5 @@ class Produit(models.Model) :
 
     def __str__(self):
         return self.nom
+    def get_absolute_url(self):
+        return reverse('produit' , kwargs={'slug': self.slug})

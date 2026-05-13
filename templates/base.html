@@ -5,8 +5,12 @@
     <title>Ma boutique</title>
 </head>
 <body>
-{% block contenu %}
-        <h1>MyStore</h1>
-{% endblock %}
+<a href="{% url 'index' %}">
+    <h1>MyStore</h1>
+</a>
+
+    {% block contenu %}
+
+    {% endblock %}
 </body>
 </html>
